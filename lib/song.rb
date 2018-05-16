@@ -13,11 +13,12 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
+
     @@artists << self.artist
     @@genres << self.genre
-    @@genre_count[self.genre] ||= 0
+
     @@genre_count[self.genre] += 1
-    @@artist_count[self.artist] ||= 0
+
     @@artist_count[self.artist] += 1
   end
 
